@@ -14,7 +14,7 @@
                                 <p>{{product.brand}}</p>
                                 
                                 
-                                <form method="POST" action="#">
+                                <form method="POST" action="{% url 'add_to_cart' %}">
                                     
                                     {% csrf_token %}
                                     <input type="number" name="quantity" value="1"/>

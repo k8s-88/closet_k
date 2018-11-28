@@ -42,9 +42,11 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'django_forms_bootstrap',
+    'cart',
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -67,6 +69,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
+                'cart.contexts.items_in_cart'
             ],
         },
     },
@@ -124,3 +128,4 @@ LOGOUT_REDIRECT_URL='/'
 
 
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
