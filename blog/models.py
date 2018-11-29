@@ -20,6 +20,16 @@ class Post(models.Model):
     views = models.IntegerField(default=0)
     image = models.ImageField(upload_to="images", null=True, blank=True)
 
-    
+    def __str__(self):
+        return self.title
+        
+        
+class Comment(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(User, related_name='comments', null=False, default=1, on_delete=models.SET_DEFAULT) 
+    post = models.ForeignKey(Post, related_name='comments', null=False, on_delete=models.CASCADE) 
+
     def __str__(self):
         return self.title

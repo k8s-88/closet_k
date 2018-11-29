@@ -43,7 +43,7 @@
                     </li>
                     <li><a href="{% url 'products' %}?category=2"> Women</a></li>
                     <li><a href="{% url 'products' %}?category=1"> Men</a></li>
-                    <li><a href="{% url 'index' %}"> Blog </a></li>
+                    <li><a href="{% url 'blog_posts' %}"> Blog </a></li>
 
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
