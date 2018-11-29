@@ -11,3 +11,6 @@ def product_list(request):
 def product_detail(request, id):
     product = get_object_or_404(Product, pk=id)
     return render(request, "products/product_detail.html", {"product": product})
+    
+def home(request):
+    return render(request, "products/home.html")
