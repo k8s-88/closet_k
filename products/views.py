@@ -4,7 +4,14 @@ from .models import Product
 
 # Create your views here.
 def product_list(request):
-    products = Product.objects.all()
+    
+    if "category" in request.GET:
+        category = request.GET["category"]
+        products = Product.objects.filter(category_id=category)
+    else:
+        products = Product.objects.all()
+        
+    
     return render(request, "products/product_list.html", {"products": products})
 
 

@@ -22,6 +22,7 @@ from checkout.views import checkout, submit_payment
 from django.views.static import serve
 from django.conf import settings
 from search.views import do_search
+from blog.views import get_index, read_post, write_post, publish_post, get_unpublished_posts
 
 
 
@@ -41,7 +42,18 @@ urlpatterns = [
     path('cart/remove/', remove_from_cart, name='remove_from_cart'),
     path('cart/checkout/', checkout, name='checkout'),
     path('checkout/pay/', submit_payment, name='submit_payment'),
-    path('search/', do_search, name="search")
+    path('search/', do_search, name="search"),
+    
+
+
+    path('blog/', get_index, name='index'),
+    path('posts/write/', write_post, name='write_post'),
+    path('posts/<int:id>/', read_post, name='read_post'),
+    path('posts/<int:id>/publish/', publish_post, name='edit_post'),
+    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
+    
+    
+    
 
 
 ]

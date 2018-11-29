@@ -34,9 +34,17 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"> Women</a></li>
-                    <li><a href="#"> Men</a></li>
-                    <li><a href="#"> Search</a></li>
+                    <li>
+                        <div class="display">
+                            <form action="{% url 'search' %}" method="GET">
+                                <input type="text" name="q">
+                                <button type="submit">Search</button>
+                        </div>
+                    </li>
+                    <li><a href="{% url 'products' %}?category=2"> Women</a></li>
+                    <li><a href="{% url 'products' %}?category=1"> Men</a></li>
+                    <li><a href="{% url 'index' %}"> Blog </a></li>
+
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                     <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
@@ -65,11 +73,7 @@
 
     <div class="container">
         <br>
-        <div class ="display">
-            <form action="{% url 'search' %}" method="GET">
-            <input type="text" name="q">
-            <button type="submit">Search</button>
-        </div>
+
         <div class="row">
             {% block content %} {% endblock %}
         </div>

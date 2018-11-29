@@ -7,13 +7,13 @@ import json
 def add_to_cart(request):
     product_id = request.POST['product']
     quantity = int(request.POST['quantity'])
-    
+    products = Product.objects.all()
     
     cart = request.session.get('cart',{})
     cart[product_id] = cart.get(product_id, 0) + quantity
     request.session['cart'] = cart
     
-    return redirect("/")
+    return render(request, "products/product_list.html", {"products": products})
 
 
 
