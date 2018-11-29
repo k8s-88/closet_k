@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from .models import Post
+from .models import Post, Comment
 from django.contrib.auth.decorators import permission_required
 
 def is_in_group(user, group_name):
@@ -27,16 +27,14 @@ def read_post(request, id):
                   })
 
 
-# def comment(request):
-#     if request.method=="POST":
-#         form = request.POST
-#         comment = form.save(commit=False)
-#         comment.author = request.user
-#         comment.save()
-#         return redirect(read_post, post.id)
-#     else:
-#         return render(request, "blog/post_form.html", {'form': form})
-        
+def comment(request, id):
+    comment = Comment()
+    comment.comment = request.POST['comment']
+    comment.post_id = id
+    comment.author = request.user
+    comment.save()
+    return redirect(read_post, id)
+
 
 
 
