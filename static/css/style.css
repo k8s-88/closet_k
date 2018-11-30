@@ -1,6 +1,8 @@
 body {
-    font-family: Arial;
+    font-family: 'Raleway', sans-serif;
     padding-top: 100px;
+
+
 }
 
 
@@ -9,8 +11,35 @@ footer {
     padding-top: 40px;
     padding-bottom: 40px;
     border-top: 1px solid #ededed;
+    background-color: #EEEEEE;
     color: #A9A9A9;
 }
+
+/*------------------Home Page---------------*/
+
+.callout {
+    padding: 20px;
+
+}
+
+.logo {
+    margin: 0 auto;
+    color: orange;
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+    font-size: 5em!important;
+    font-weight: 300;
+}
+
+.tagline {
+
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+    
+
+}
+
+/*---------------------------------*/
 
 .icon-bar {
     background-color: #fff;
@@ -21,7 +50,68 @@ footer {
 }
 
 
-/*collage for home page*/
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+
+}
+
+.product {
+    background-sze: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+
+
+}
+
+caption p {
+
+    word-wrap: break-word;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.panel-default {
+    border-color: transparent;
+    padding: 0 10px;
+
+
+}
+
+.panel-body {
+    height: 100%;
+    border: solid 1px #ddd;
+}
+
+.product-description {
+    min-height: 40px;
+}
+
+
+
+/*collage for home page---------------------------------------------*/
+
+.colour_background {
+    background-color: black;
+
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -37,16 +127,30 @@ body {
 }
 
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
 }
 
+
+.form-control {
+    height: 25px;
+
+}
+
+.search {
+    background-color: white;
+}
+
 /* Create four equal columns that sits next to each other */
+
 .column {
-    -ms-flex: 25%; /* IE10 */
+    -ms-flex: 25%;
+    /* IE10 */
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
@@ -58,6 +162,7 @@ body {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
+
 @media screen and (max-width: 800px) {
     .column {
         -ms-flex: 50%;
@@ -67,12 +172,30 @@ body {
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
     .column {
         -ms-flex: 100%;
         flex: 100%;
+
+
         max-width: 100%;
     }
 }
 
 /*-------------------------------*/
+
+.stylish-input-group .input-group-addon {
+    background: white !important;
+}
+
+.stylish-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc;
+}
+
+.stylish-input-group button {
+    border: 0;
+    background: transparent;
+}
