@@ -19,17 +19,20 @@ def read_post(request, id):
     post = Post.objects.get(pk=id)
     post.views += 1
     post.save()
+    
 
 
     return render(request, "blog/read_post.html", 
         {
             'post': post, 
+           
                   })
 
 
 def comment(request, id):
     comment = Comment()
-    comment.comment = request.POST['comment']
+    comment.content = request.POST['comment']
+    comment.title = request.POST['title']
     comment.post_id = id
     comment.author = request.user
     comment.save()
