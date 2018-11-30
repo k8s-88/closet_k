@@ -40,14 +40,16 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <a>
                         <form action="{% url 'search' %}" method="GET" class="form-inline">
                             <input class="form-control mr-sm-2" type="text" placeholder="Search Products" aria-label="Search" name="q">
                             <button type="submit"><i class="fas fa-search"></i></button>
                         </form>
+                        </a>
                     </li>
 
-                    <li><a href="{% url 'products' %}?category=2"> Women</a></li>
-                    <li><a href="{% url 'products' %}?category=1"> Men</a></li>
+                    <li><a href="{% url 'view_category' 2 %}"> Women</a></li>
+                    <li><a href="{% url 'view_category' 1 %}"> Men</a></li>
                     <li><a href="{% url 'blog_posts' %}"> Blog </a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>

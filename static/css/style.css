@@ -15,6 +15,10 @@ footer {
     color: #A9A9A9;
 }
 
+li {
+    display: inline-block;
+}
+
 /*------------------Home Page---------------*/
 
 .callout {
@@ -35,7 +39,7 @@ footer {
 
     font-family: 'Sacramento', cursive;
     text-align: center;
-    
+
 
 }
 
@@ -106,11 +110,13 @@ caption p {
 
 /*collage for home page---------------------------------------------*/
 
-.colour_background {
-    background-color: black;
-
+.column img {
+    height: 50%;
 }
 
+.long img {
+    height: 100%;
+}
 
 * {
     box-sizing: border-box;
@@ -124,6 +130,55 @@ body {
 .header {
     text-align: center;
     padding: 32px;
+}
+
+
+
+.heading {
+    background: #fafafa;
+    color: black;
+    font-size: 82px;
+    font-weight: bold;
+    line-height: 50px;
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 40;
+}
+
+.main {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+
+.container {
+    position: relative;
+    text-align: center;
+ 
+}
+
+
+.centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fafafa;
+    color: black;
+    font-size: 82px;
+    font-weight: bold;
+    line-height: 50px;
+    mix-blend-mode: screen;
+    width: 100%;
+    text-align: center;
+    z-index: 40;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .row {

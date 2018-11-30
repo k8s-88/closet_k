@@ -4,10 +4,13 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=254, null=False, blank=False)
-    parent =models.ForeignKey('self', null=True, blank=True, on_delete=models.PROTECT)
+    parent =models.ForeignKey('self', null=True, blank=True, related_name='sub_categories', on_delete=models.PROTECT)
     
     def __str__(self):
-        return self.name
+        if self.parent:
+            return "{0} {1}".format(self.name, self.parent)
+        else:
+            return self.name
         
 
 class Product(models.Model):

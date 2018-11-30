@@ -1,18 +1,18 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product, Category
 
 
 # Create your views here.
 def product_list(request):
-    
-    if "category" in request.GET:
-        category = request.GET["category"]
-        products = Product.objects.filter(category_id=category)
-    else:
-        products = Product.objects.all()
-        
-    
+    products = Product.objects.all()
     return render(request, "products/product_list.html", {"products": products})
+
+
+
+def view_category(request, id):
+    category = get_object_or_404(Category, pk=id)
+    return render(request, "products/view_category.html", {"category": category})
+
 
 
 def product_detail(request, id):
