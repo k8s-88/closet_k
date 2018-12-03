@@ -1,3 +1,9 @@
+.navbar-default {
+    background-color: #EEEEEE;
+    border-color: #EEEEEE;
+}
+
+
 body {
     font-family: 'Raleway', sans-serif;
     padding-top: 100px;
@@ -6,18 +12,87 @@ body {
 }
 
 
-footer {
-    margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-top: 1px solid #ededed;
-    background-color: #EEEEEE;
-    color: #A9A9A9;
-}
+
 
 li {
     display: inline-block;
 }
+
+
+/*----carousel----------------*/
+
+
+
+
+.link_images {
+    width: 100%;
+    height: 200px;
+    overerflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin: 6px;
+    padding: 6px;
+
+}
+
+
+
+
+.test {
+    max-height:80%;
+}
+
+
+
+
+.tint {
+    opacity: 1;
+}
+
+.tint:hover {
+    opacity: 0.5;
+    transition: opacity 1s, background 1s;
+
+}
+
+
+.grey {
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 500px;
+    margin-top:50px;
+    
+
+}
+
+.card {
+    background-color: white;
+    overflow: hidden;
+    padding: 5px;
+    margin-right: 6px;
+    display: inline-block;
+    
+    
+}
+
+.card-img-top {
+    height:150px;
+}
+
+/*.pic {*/
+    /*height: 100px;*/
+    /*width: 200px;*/
+    /*background-size: contain;*/
+    /*margin: 0 auto;*/
+/*    overflow: hidden;*/
+/*    max-height: 50%;*/
+/*}*/
+
+
+
+
+
+
 
 /*------------------Home Page---------------*/
 
@@ -159,7 +234,9 @@ body {
 .container {
     position: relative;
     text-align: center;
- 
+    margin-top: 0px;
+    padding-top: 0px;
+
 }
 
 
@@ -180,6 +257,16 @@ body {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
+
+.category_heading {
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    padding: 20px;
+
+}
+
 
 .row {
     display: -ms-flexbox;
@@ -253,4 +340,39 @@ body {
 .stylish-input-group button {
     border: 0;
     background: transparent;
+}
+
+.footer {
+    width: 100%;
+    text-align: left;
+    margin-top: 25px;
+    background-color: #EEEEEE;
+    color: #A9A9A9;
+}
+
+.second_footer {
+    width: 100%;
+    text-align: left;
+    background-color: #DDDDDD;
+    color: black;
+}
+
+
+
+.social-links {
+    padding: 15px;
+    margin-top: 25px;
+
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    texrt-align: center;
+    color: #88898A;
+    background-color: #feb3cd;
 }

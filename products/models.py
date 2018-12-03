@@ -21,6 +21,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='images')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     stock = models.IntegerField(default=0)
+    size = models.IntegerField(default=6)
     category = models.ForeignKey(Category, related_name="products", on_delete=models.PROTECT)
     
     def __str__(self):

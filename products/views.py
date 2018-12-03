@@ -1,11 +1,15 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product, Category
+from .forms import SizeForm
 
 
 # Create your views here.
 def product_list(request):
+    form = SizeForm()
+    print('**************')
+    print(form)
     products = Product.objects.all()
-    return render(request, "products/product_list.html", {"products": products})
+    return render(request, "products/product_list.html", {"products": products, "form": form})
 
 
 
@@ -21,3 +25,5 @@ def product_detail(request, id):
     
 def home(request):
     return render(request, "products/home.html")
+    
+    

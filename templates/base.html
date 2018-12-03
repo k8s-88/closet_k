@@ -41,10 +41,10 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a>
-                        <form action="{% url 'search' %}" method="GET" class="form-inline">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search Products" aria-label="Search" name="q">
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
+                            <form action="{% url 'search' %}" method="GET" class="form-inline">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search Products" aria-label="Search" name="q">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
                         </a>
                     </li>
 
@@ -87,11 +87,26 @@
             {% block content %} {% endblock %}
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <p>Made by Code Institute bootcampers</p>
+
+    <div class="row footer">
+        <div class="col-sm-12">
+            <p><strong><i>Help & Information</i></strong><br> Delivery & Returns <br> Premier Delivery<br> 10% Student Discount <br> Contact Us
+            </p>
         </div>
-    </footer>
+        <div class="col-sm-12">
+            <ul class="list-inline social-links">
+                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-instagram"></i></a> </li>
+                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-youtube"></i></a> </li>
+                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-pinterest"></i></a> </li>
+                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a> </li>
+            </ul>
+        </div>
+        <div class="col-sm-12 second_footer">
+            <p>2018 Sole Mates</p>
+        </div>
+    </div>
+
 </body>
 
 </html>
