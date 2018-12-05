@@ -1,56 +1,80 @@
-{% extends "base.html" %}
-{% load static from staticfiles %}
-
-{% block head_styles %}
-    {{ block.super }}
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> 
-
-{% endblock %}
+{% extends "base.html" %} {% load static from staticfiles %} {% block head_styles %} {{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %}
 
 
+<div class="row blog">
 
-{% block content %}
+    <div class="col-xs-4"> {% if post.image %}
+        <img src="{{ MEDIA_URL }}{{ post.image }}" class="read_blog_image" /> {% endif %}</div>
 
 
-    <div class="row">
-        <div class="col-md-2 col-sm-3 text-center">
-            <a class="story-img" href="#">
-                <img src="https://via.placeholder.com/150" class="img-circle">
-            </a>
-            <p><span class="boldtext">Author:</span> {{ post.author.username }}</p>
-        </div>
-        <div class="col-sm-10 col-md-9">
-            <h3>{{ post.title }}</h3>
-            
-            {% if post.image %}
-            <img src="{{ MEDIA_URL }}{{ post.image }}"/>
-             {% endif %}
-            
-            <div class="row">
-                <div class="col-xs-9">
+
+
+    <div class="col-xs-8 blog_intro">
+        <p class="blog_title">{{ post.title }}
+            <p>
+
+
+                <div>
                     <p>{{ post.content | linebreaksbr }}</p>
-                    <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                    <p><span class="boldtext">Views:</span> {{ post.views }}</p>
-                    <p><span class="boldtext">Tag:</span> history</p>
 
-                    <a href="{% url 'blog_posts' %}" class="btn btn-default">Back to Blog</a>
-                    {% if user.is_authenticated %}
-                        <form method="POST" action="{% url 'comment' post.id %}">
-                            {% csrf_token %}
-                            <input type="text" name="title" placeholder="comment title"/>
-                            <input type="text" name="comment" placeholder="comment content"/>
-                            <input type="submit" value="Comment"/>
-                        </form>
-                    {% else %}
-                        <p>You must be signed in to comment</p>
-                    {% endif %}
-                    {% for comment in post.comments.all %}
-                        <p><strong>{{comment.title}}</strong></p>
-                        <p>{{comment.content}}</p>
-                    {% endfor %}
+                    <hr>
                 </div>
-            </div>
-        </div>
+
+
+                <a href="{% url 'blog_posts' %}" class="blog_title">Back to Blog</a> {% if user.is_authenticated %}
+
+                <hr>
+                <div class="form-group">
+
+                    <form method="POST" action="{% url 'comment' post.id %}">
+                        {% csrf_token %}
+
+                        <input class="form-control" rows="5" type="text" name="comment" placeholder="Make a Comment" />
+                        <input class="btn btn-default" type="submit" value="Send!" />
+                    </form>
+                </div>
+
+                {% else %}
+                <p>You must be signed in to comment</p>
+                {% endif %}
+
+
+
+
+
+                <p class="blog_title">Comments</p>
+
+                <div class="row">
+                    <div class="panel panel-white post panel-shadow">
+                        <div class="post-heading">
+                            <div class="pull-left image">
+                                <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                            </div>
+                            <div class="pull-left meta">
+                                <div class="title h5">
+                                    {% for comment in post.comments.all %}
+                                    <a href="#"><b>{{comment.author}}</b></a> made a post.
+                                </div>
+                                <h6 class="text-muted time">1 minute ago</h6>
+                            </div>
+                        </div>
+                        <div class="post-description">
+                            <p>{{comment.content}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
     </div>
+</div>
+
+
+
+
+
+<!--{% for comment in post.comments.all %}-->
+<!--<p><strong>{{comment.title}}</strong></p>-->
+<!--<p>{{comment.content}}</p>-->
+<!--{% endfor %}-->
 
 {% endblock %}

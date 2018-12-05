@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Sacramento" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
@@ -50,6 +51,38 @@
                     </li>
 
                     <li><a href="{% url 'view_category' 2 %}"> Women</a></li>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <ul>
+                            {% for sub_category in category.sub_categories.all %}
+                            <a href="{% url 'view_category' sub_category.id %}">
+                                <li>{{ sub_category.name }}</li>
+                            </a>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+
+
+                    <!--            <li class="nav-item dropdown">-->
+                    <!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                    <!-- Women-->
+                    <!--</a>-->
+                    <!--                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+                    <!--                    <ul>-->
+                    <!--                        {% for sub_category in category.sub_categories.all %}-->
+                    <!--                        <a href="{% url 'view_category' sub_category.id %}">-->
+                    <!--                            <li class="drop_down_item">{{ sub_category.name }}</li>-->
+                    <!--                        </a>-->
+                    <!--                        {% endfor %}-->
+                    <!--                    </ul>-->
+                    <!--                </div>-->
+                    <!--            </li>-->
+
+
+
+
+
                     <li><a href="{% url 'view_category' 1 %}"> Men</a></li>
                     <li><a href="{% url 'blog_posts' %}"> Blog </a></li>
                     <li class="nav-item dropdown">
@@ -90,21 +123,21 @@
     </div>
 
     <div class="row footer">
-        <div class="col-sm-12">
-            <p><strong><i>Help & Information</i></strong><br> Delivery & Returns <br> Premier Delivery<br> 10% Student Discount <br> Contact Us
+        <div class="col-sm-4">
+            <p class="footer_text"><strong><i>Help & Information</i></strong><br> Delivery & Returns <br> Premier Delivery<br> 10% Student Discount <br> Contact Us
             </p>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-4">
             <ul class="list-inline social-links">
-                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-instagram"></i></a> </li>
-                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-youtube"></i></a> </li>
-                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-pinterest"></i></a> </li>
-                <li class="list-inline-item"> <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a> </li>
+                <li class="list-inline-item"> <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"> <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram "></i></a> </li>
+                <li class="list-inline-item"> <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube "></i></a> </li>
+                <li class="list-inline-item"> <a href="https://www.pinterest.ie/ " target="_blank "><i class="fab fa-pinterest "></i></a> </li>
+                <li class="list-inline-item"> <a href="https://www.linkedin.com "target="_blank " ><i class="fab fa-linkedin "></i></a> </li>
             </ul>
         </div>
-        <div class="col-sm-12 second_footer">
-            <p>2018 Sole Mates</p>
+        <div class="col-sm-12 second_footer ">
+            <p class="copy_right ">2018 Sole Mates</p>
         </div>
     </div>
 

@@ -3,31 +3,37 @@
 
     <ul>
         {% for sub_category in category.sub_categories.all %}
-        <a href="{% url 'view_category' sub_category.id %}"><li>{{ sub_category.name }}</li></a>
+        <a href="{% url 'view_category' sub_category.id %}">
+            <li>{{ sub_category.name }}</li>
+        </a>
         {% endfor %}
     </ul>
-    
-    
 
-    <div class="row">
+
+
+    <div class="row product_list">
         {% for product in category.products.all %}
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="thumbnail">
-                <img src="{{MEDIA_URL}}{{product.image}}" alt="">
+                <div class="product_image">
+                    <img class="inner_img" src="{{MEDIA_URL}}{{product.image}}" alt="">
+                </div>
                 <div class="caption">
-                    <h4 class="pull-right">€{{product.price}}</h4>
+                    <h4>€{{product.price}}</h4>
                     <h4><a href="{% url 'product_detail' product.id %}">{{product.name}}</a>
                     </h4>
                     <p>{{product.brand}}</p>
 
 
-                
-                    
-                     <form method="POST" action="{% url 'add_to_cart' %}">
+
+
+                    <form method="POST" action="{% url 'add_to_cart' %}">
 
                         {% csrf_token %}
 
+                        <label for="size">Size</label>
                         <input type="number" name="size" value="3" />
+                        <label for="Quantity">Quantity</label>
                         <input type="number" name="quantity" value="1" />
                         <input type="hidden" name="product" value="{{product.id}}" />
                         <input class="btn btn-primary" type="submit" value="Add to cart" />
