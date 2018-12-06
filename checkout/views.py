@@ -12,29 +12,26 @@ def get_cart_items_and_total(cart):
     cart_items = []
     cart_total = 0
 
-    for product_id, quantity in cart.items():
+    for product_id, sizes in cart.items():
         product = get_object_or_404(Product, pk=product_id)
+        for size, quantity in sizes.items():
        
         
-        cart_items.append({
-            'id': product.id,
-            'name': product.name,
-            'brand': product.brand,
-            'sku': product.sku,
-            'description': product.description,
-            'image': product.image,
-            'price': product.price,
-            'stock': product.stock,
-            'quantity': quantity,
-            'total': product.price * quantity,
-          
-        })    
-        
-    cart_total =0
-    for item in cart_items:
-        cart_total += item['total']
-        
-        
+            cart_items.append({
+                'id': product.id,
+                'name': product.name,
+                'brand': product.brand,
+                'sku': product.sku,
+                'description': product.description,
+                'image': product.image,
+                'price': product.price,
+                'stock': product.stock,
+                'quantity': quantity,
+                'total': product.price * quantity,
+              
+            })
+            cart_total += product.price * quantity
+
     return {'cart_items': cart_items, 'cart_total': cart_total }
         
         
@@ -71,12 +68,15 @@ def submit_payment(request):
         #Save the order to the database
         order = order_form.save()
         cart = request.session.get('cart', {})
-        for product_id, quantity in cart.items():
-            line_item = OrderLineItem()
-            line_item.product_id = product_id
-            line_item.quantity = quantity
-            line_item.order = order
-            line_item.save()
+        for product_id, sizes in cart.items():
+             for size, quantity in sizes.items():
+                
+                line_item = OrderLineItem()
+                line_item.product_id = product_id
+                line_item.size = size
+                line_item.quantity = quantity
+                line_item.order = order
+                line_item.save()
             
         
         # Grab the money and run

@@ -32,7 +32,6 @@ def read_post(request, id):
 def comment(request, id):
     comment = Comment()
     comment.content = request.POST['comment']
-    comment.title = request.POST['title']
     comment.post_id = id
     comment.author = request.user
     comment.save()

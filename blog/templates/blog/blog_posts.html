@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% load static from staticfiles %} {% block head_styles %} {{ block.super }}
-<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %} {% for post in posts %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %} 
+
+
+{% for post in posts %}
 <div class="row blog">
     <div class="col-md-2 col-sm-3">
         {% if post.image %}
