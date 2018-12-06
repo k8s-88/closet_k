@@ -41,49 +41,29 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a>
-                            <form action="{% url 'search' %}" method="GET" class="form-inline">
-                                <i class="fa fa-search" aria-hidden="true"></i>
+                    <li><a><form action="{% url 'search' %}" method="GET" class="form-inline"><i class="fa fa-search" aria-hidden="true"></i>
                                 <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" name="q">
-                            </form>
-                        </a>
+                            </form></a></li>
+
+                    <!--<li><a href="{% url 'view_category' 2 %}"> Women</a></li>-->
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Women</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a href="/category/7">Trainers</a>
+                            <a href="/category/4">Heels</a>
+                            <a href="/category/6">Boots</a>
+                        </div>
                     </li>
-
-                    <li><a href="{% url 'view_category' 2 %}"> Women</a></li>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <ul>
-                            {% for sub_category in category.sub_categories.all %}
-                            <a href="{% url 'view_category' sub_category.id %}">
-                                <li>{{ sub_category.name }}</li>
-                            </a>
-                            {% endfor %}
-                        </ul>
-                    </div>
-
-
-
-                    <!--            <li class="nav-item dropdown">-->
-                    <!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                    <!-- Women-->
-                    <!--</a>-->
-                    <!--                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
-                    <!--                    <ul>-->
-                    <!--                        {% for sub_category in category.sub_categories.all %}-->
-                    <!--                        <a href="{% url 'view_category' sub_category.id %}">-->
-                    <!--                            <li class="drop_down_item">{{ sub_category.name }}</li>-->
-                    <!--                        </a>-->
-                    <!--                        {% endfor %}-->
-                    <!--                    </ul>-->
-                    <!--                </div>-->
-                    <!--            </li>-->
-
-
-
-
-
-                    <li><a href="{% url 'view_category' 1 %}"> Men</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Men</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a href="/category/3">Trainers</a>
+                            <a href="/category/8">Shoes</a>
+                            <a href="/category/5">Boots</a>
+                        </div>
+                    </li>
                     <li><a href="{% url 'blog_posts' %}"> Blog </a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
@@ -133,7 +113,7 @@
                 <li class="list-inline-item"> <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram "></i></a> </li>
                 <li class="list-inline-item"> <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube "></i></a> </li>
                 <li class="list-inline-item"> <a href="https://www.pinterest.ie/ " target="_blank "><i class="fab fa-pinterest "></i></a> </li>
-                <li class="list-inline-item"> <a href="https://www.linkedin.com "target="_blank " ><i class="fab fa-linkedin "></i></a> </li>
+                <li class="list-inline-item"> <a href="https://www.linkedin.com " target="_blank "><i class="fab fa-linkedin "></i></a> </li>
             </ul>
         </div>
         <div class="col-sm-12 second_footer ">
