@@ -1,6 +1,20 @@
 {% extends 'base.html' %} {% load static from staticfiles %} {% block head_styles %} {{ block.super }}
-<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %} {% for post in posts %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %} 
+
+
+
+
+<div class="row blog_heading">
+    Sole Mates - Blog
+</div>
+
+
+{% for post in posts %}
+
 <div class="row blog">
+
+
+
     <div class="col-sm-4">
         {% if post.image %}
         <img src="{{ MEDIA_URL }}{{ post.image }}" class="blog_image" /> {% endif %}

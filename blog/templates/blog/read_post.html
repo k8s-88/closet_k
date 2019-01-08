@@ -2,69 +2,69 @@
 <link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %}
 
 
-<div class="row blog">
+<div class="row">
+    <div class="col-sm-12 single_blog_title">{{ post.title }}</div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
 
-    <!--<div class="col-xs-4"> {% if post.image %}-->
-    <!--    <img src="{{ MEDIA_URL }}{{ post.image }}" class="read_blog_image" /> {% endif %}</div>-->
+        {% if post.image %}
+        <img src="{{ MEDIA_URL }}{{ post.image }}" class="read_blog_image" /> {% endif %}</div>
+</div>
 
+<div class="row single_blog">
 
+    <div class="single_blog_intro">
 
+        <div>
+            <p>{{ post.content | linebreaksbr }}</p>
 
-    <div class="col-xs-8 blog_intro">
-        <p class="blog_title">{{ post.title }}
-            <p>
-
-
-                <div>
-                    <p>{{ post.content | linebreaksbr }}</p>
-
-                    <hr>
-                </div>
-
-
-                <a href="{% url 'blog_posts' %}" class="blog_title">Back to Blog</a> {% if user.is_authenticated %}
-
-                <hr>
-                <div class="form-group">
-
-                    <form method="POST" action="{% url 'comment' post.id %}">
-                        {% csrf_token %}
-
-                        <input class="form-control" rows="5" type="text" name="comment" placeholder="Make a Comment" />
-                        <input class="btn btn-default" type="submit" value="Send!" />
-                    </form>
-                </div>
-
-                {% else %}
-                <p>You must be signed in to comment</p>
-                {% endif %}
+            <hr>
+        </div>
 
 
+        <a href="{% url 'blog_posts' %}" class="blog_title">Back to Blog</a> {% if user.is_authenticated %}
+
+        <hr>
+        <div class="form-group">
+
+            <form method="POST" action="{% url 'comment' post.id %}">
+                {% csrf_token %}
+
+                <input class="form-control" rows="5" type="text" name="comment" placeholder="Make a Comment" />
+                <input class="btn btn-default" type="submit" value="Send!" />
+            </form>
+        </div>
+
+        {% else %}
+        <p>You must be signed in to comment</p>
+        {% endif %}
 
 
 
-                <p class="blog_title">Comments</p>
 
-                <div class="row">
-                    <div class="panel panel-white post panel-shadow">
-                        <div class="post-heading">
-                            <div class="pull-left image">
-                                <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
-                            </div>
-                            <div class="pull-left meta">
-                                <div class="title h5">
-                                    {% for comment in post.comments.all %}
-                                    <a href="#"><b>{{comment.author}}</b></a> made a post.
-                                </div>
-                                <h6 class="text-muted time">1 minute ago</h6>
-                            </div>
+
+        <p class="blog_title">Comments</p>
+
+        <div class="row">
+            <div class="panel panel-white post panel-shadow">
+                <div class="post-heading">
+                    <div class="pull-left image">
+                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                    </div>
+                    <div class="pull-left meta">
+                        <div class="title h5">
+                            {% for comment in post.comments.all %}
+                            <a href="#"><b>{{comment.author}}</b></a> made a post.
                         </div>
-                        <div class="post-description">
-                            <p>{{comment.content}}</p>
-                        </div>
-                        {% endfor %}
+                        <h6 class="text-muted time">1 minute ago</h6>
                     </div>
                 </div>
+                <div class="post-description">
+                    <p>{{comment.content}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
 
