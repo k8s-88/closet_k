@@ -1,24 +1,19 @@
 {% extends 'base.html' %} {% load static from staticfiles %} {% block head_styles %} {{ block.super }}
-<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %} 
-
-
-{% for post in posts %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> {% endblock %} {% block content %} {% for post in posts %}
 <div class="row blog">
-    <div class="col-md-2 col-sm-3">
+    <div class="col-sm-4">
         {% if post.image %}
-        <img src="{{ MEDIA_URL }}{{ post.image }}" class = "blog_image"/> {% endif %}
+        <img src="{{ MEDIA_URL }}{{ post.image }}" class="blog_image" /> {% endif %}
 
 
     </div>
-    <div class="col-md-10 col-sm- blog_intro">
+    <div class="col-sm-7 blog_intro">
         <p class="blog_title">{{ post.title }}</p>
-        <div class="row">
-            <div class="col-xs-9">
-                <p>{{ post.content|truncatewords:50 }}</p>
-                <p><a href="{% url 'read_post' post.id %}" class="btn btn-default">Read more</a></p>
-                <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-            </div>
-        </div>
+
+        <p>{{ post.content|truncatewords:50 }}</p>
+        <p><a href="{% url 'read_post' post.id %}" class="btn btn-default">Read more</a></p>
+        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+
     </div>
     <hr>
 </div>
