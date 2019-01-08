@@ -103,6 +103,8 @@ li {
 }
 
 
+/*------------------------------Home page--------------------------------*/
+
 .grey {
     background-color: #EEEEEE;
     width: 100%;
@@ -118,9 +120,49 @@ li {
     background-color: #EEEEEE;
     width: 100%;
     height: 800px;
-    margin: 50px;
+    margin-top: 50px;
 
 }
+
+
+
+.arrow2 {
+
+    position: relative;
+
+    font-size: 49px;
+
+    text-align: center;
+
+    transform: rotate(0deg);
+
+    animation: bouncearrow 1s infinite;
+
+}
+
+@keyframes bouncearrow {
+
+    0% {
+
+        top: 0px;
+
+    }
+
+    50% {
+
+        top: 10px;
+
+    }
+
+    100% {
+
+        top: 0px;
+
+    }
+
+}
+
+
 
 .card {
     background-color: white;
@@ -401,7 +443,8 @@ body {
 
     font-family: 'Raleway', sans-serif;
     font-size: 3em;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
 
 }
 

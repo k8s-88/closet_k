@@ -5,73 +5,21 @@
 <p>€{{product.price}}</p>
 </p>{{product.name}}</p>
 <p>{{product.brand}}</p>
-</p>{{product.sku}}</p>
 </p>{{product.description}}</p>
-</p>{{product.stock}}</p>
 
 
+<form method="POST" action="{% url 'add_to_cart' %}">
 
-<!--<form class="cart-form" action="#" method="post">-->
-<!-- <label class="product-description__size" for="size-select">Size</label>-->
-<!-- <select name="size" id="size-select" required="" oninvalid="this.setCustomValidity('Please select size')" oninput="setCustomValidity('')">-->
-<!--<option value="" selected="" disabled="" hidden="">Please select</option>-->
-<!--<option value="UK 10">-->
-<!--      UK 10-->
-<!-- </option>-->
+    {% csrf_token %}
 
-<!-- <option value="UK 12">-->
-<!--     UK 12-->
-<!-- </option>-->
+    <label for="size">Size</label>
+    <input type="number" name="size" value="3" />
+    <label for="Quantity">Quantity</label>
+    <input type="number" name="quantity" value="1" />
+    <input type="hidden" name="product" value="{{product.id}}" />
+    <input class="btn btn-primary" type="submit" value="Add to cart" />
+</form>
 
-<!-- <option value="UK 14">-->
-<!--     UK 14-->
-<!-- </option>-->
 
-<!-- <option value="UK 16">-->
-<!--     UK 16-->
-<!-- </option>-->
-
-<!-- <option value="UK 18">-->
-<!--     UK 18-->
-<!-- </option>-->
-
-<!-- <option value="UK 4">-->
-<!--     UK 4-->
-<!-- </option>-->
-
-<!-- <option value="UK 6">-->
-<!--     UK 6-->
-<!-- </option>-->
-
-<!-- <option value="UK 8">-->
-<!--     UK 8-->
-<!--  </option>-->
-
-<!--</select>-->
-<!-- <label for="id_quantity">Quantity:</label><select name="quantity" id="id_quantity">-->
-<!--  <option value="1">1</option>-->
-
-<!--  <option value="2">2</option>-->
-
-<!--  <option value="3">3</option>-->
-
-<!--  <option value="4">4</option>-->
-
-<!--  <option value="5">5</option>-->
-
-<!--  <option value="6">6</option>-->
-
-<!--  <option value="7">7</option>-->
-
-<!--  <option value="8">8</option>-->
-
-<!--  <option value="9">9</option>-->
-
-<!--  <option value="10">10</option>-->
-
-<!--</select><input type="hidden" name="update" value="False" id="id_update">-->
-<!-- <input type="hidden" name="csrfmiddlewaretoken" value="vMsJnT7AMJ7TDpibwUZnjemVSEOxFbRwWA942BhKUB0pwVYf5LBUvssOfyFpxPwC">-->
-<!-- <button class="button product-description__button">Add to bag</button>-->
-<!--</form>-->
 
 {% endblock content %}

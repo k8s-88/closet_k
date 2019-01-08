@@ -27,17 +27,17 @@
 
 
 
-                    <form method="POST" action="{% url 'add_to_cart' %}">
+                    <!--<form method="POST" action="{% url 'add_to_cart' %}">-->
 
-                        {% csrf_token %}
+                    <!--    {% csrf_token %}-->
 
-                        <label for="size">Size</label>
-                        <input type="number" name="size" value="3" />
-                        <label for="Quantity">Quantity</label>
-                        <input type="number" name="quantity" value="1" />
-                        <input type="hidden" name="product" value="{{product.id}}" />
-                        <input class="btn btn-primary" type="submit" value="Add to cart" />
-                    </form>
+                    <!--    <label for="size">Size</label>-->
+                    <!--    <input type="number" name="size" value="3" />-->
+                    <!--    <label for="Quantity">Quantity</label>-->
+                    <!--    <input type="number" name="quantity" value="1" />-->
+                    <!--    <input type="hidden" name="product" value="{{product.id}}" />-->
+                    <!--    <input class="btn btn-primary" type="submit" value="Add to cart" />-->
+                    <!--</form>-->
 
                 </div>
             </div>
