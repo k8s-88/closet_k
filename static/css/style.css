@@ -227,21 +227,64 @@ li {
 }
 
 
-/*label{*/
 
-/*display: inline-block;*/
 
-/*    float: left;*/
 
-/*    clear: left;*/
+/*---------------------------------view category page --------------------------------*/
 
-/*    width: 100px;*/
+#shop_now {
+    background-color: #93c54b;
+    color: white;
 
-/*    text-align: right;*/
+}
 
-/*    padding:12px;*/
+#shop_now:hover {
+   background-color:#568611; 
+    
+}
 
-/*}*/
+
+
+
+/*---------------------product detail page---------------------------------*/
+
+#size {
+
+    box-shadow: 1px 1px 8px #93c54b;
+
+}
+
+#quantity {
+
+    box-shadow: 1px 1px 8px #93c54b;
+}
+
+
+#add_to_cart {
+    background-color: #93c54b;
+    color: white;
+    /*padding:5px;*/
+    margin-top: 25px;
+
+}
+
+#add_to_cart:hover {
+   background-color:#568611; 
+    
+}
+
+
+#price {
+    color: #D21345;
+    font-size: 18px;
+}
+
+#product_name {
+    font-size: 18px;
+    padding-top:5px;
+}
+
+
 
 /*input {*/
 
@@ -275,6 +318,7 @@ li {
     background-color: #93c54b;
 
 }
+
 
 
 
@@ -478,10 +522,10 @@ body {
 
 .row {
     display: -ms-flexbox;
-     /*IE10 */
+    /*IE10 */
     /*display: flex;*/
     /*-ms-flex-wrap: wrap;*/
-     /*IE10 */
+    /*IE10 */
     /*flex-wrap: wrap;*/
     padding: 0 4px;
 }
@@ -490,7 +534,7 @@ body {
 
 .column {
     -ms-flex: 25%;
-     /*IE10 */
+    /*IE10 */
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
@@ -555,12 +599,12 @@ body {
 }
 
 
-.second_footer {
+#second_footer {
     width: 100%;
     text-align: left;
     background-color: #DDDDDD;
     color: black;
-    /*padding: 5px*/
+    
 }
 
 .copy_right {
@@ -568,10 +612,12 @@ body {
     margin-bottom: 10px;
     margin-left: 20px;
 
-
 }
 
-
+#footer {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 .social-links {
 
@@ -614,9 +660,20 @@ body {
 
 }
 
+#sign_in {
+    color: #93c54b;
+    margin-top: 10px;
+}
+
+#sign_in_link {
+    color:#568611
+    
+}
 
 .single_blog {
-    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
     background-color: #EEEEEE;
 }
 
@@ -629,6 +686,7 @@ body {
 
     text-align: left;
     padding: 5%;
+    
 
 }
 
@@ -646,7 +704,7 @@ body {
 .blog_title {
     font-size: 2.5em;
     margin-top: 0px;
-   font-family: 'Charm', cursive;
+    font-family: 'Charm', cursive;
     text-align: left;
 }
 
@@ -721,8 +779,11 @@ body {
 }
 
 /*.post .post-description .stats .stat-item {*/
+
 /*    display: inline-block;*/
+
 /*    margin-right: 15px;*/
+
 /*}*/
 
 .post .post-description .stats .stat-item .icon {

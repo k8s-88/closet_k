@@ -1,24 +1,42 @@
 {% extends "base.html" %} {% block content %}
 
 
-<img src="{{MEDIA_URL}}{{product.image}}" alt="">
-<p>€{{product.price}}</p>
-</p>{{product.name}}</p>
-<p>{{product.brand}}</p>
-</p>{{product.description}}</p>
+<div class="container-fluid">
 
 
-<form method="POST" action="{% url 'add_to_cart' %}">
 
-    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-2">
+            <div class="card" style="width: 18rem; float: right;">
+                <img class="card-img-top" src="{{MEDIA_URL}}{{product.image}}" alt="">
+            </div>
+        </div>
 
-    <label for="size">Size</label>
-    <input type="number" name="size" value="3" />
-    <label for="Quantity">Quantity</label>
-    <input type="number" name="quantity" value="1" />
-    <input type="hidden" name="product" value="{{product.id}}" />
-    <input class="btn btn-primary" type="submit" value="Add to cart" />
-</form>
+
+        <div class="col-md-2" style="text-align: left;">
+            <p id="product_name">{{product.name}}</p>
+            <p id="price"><b>€{{product.price}}</b></p>
+            <p>{{product.brand}}</p>
+            <p>{{product.description}}</p>
+        </div>
+
+        <div class="col-md-2" style="text-align: left;">
+
+            <form method="POST" action="{% url 'add_to_cart' %}">
+
+                {% csrf_token %}
+
+                <label for="size">Size</label><br>
+                <input type="number" id="size" name="size" value="3" /> <br><br>
+                <label for="Quantity">Quantity</label><br>
+                <input type="number" id="quantity" name="quantity" value="1" />
+                <input type="hidden" name="product" value="{{product.id}}" /> <br>
+                <input class="btn btn-primary" type="submit" id="add_to_cart" value="Add to cart" />
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
