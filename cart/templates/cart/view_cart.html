@@ -15,12 +15,12 @@
 
         {% for item in cart_items %}
         <tr>
-            <td><img width="150" height="75" src="{{ MEDIA_URL }}{{ item.image}}" /></td>
+            <td><img id="cart-image" width="150" height="75" src="{{ MEDIA_URL }}{{ item.image}}" /></td>
             <td>{{ item.name }}</td>
             <td>{{ item.quantity }}</td>
             <td>{{item.size}}</td>
             <td>€{{ item.price }}</td>
-            <td>€{{ item.total }}</td>
+            <td id="item-total"><b>€{{ item.total }}</b></td>
             <td>
 
 
@@ -28,7 +28,7 @@
                     {% csrf_token %}
                     <input type="hidden" name="product" value="{{ item.id }}" />
                     <input type="hidden" name="size" value="{{ item.size }}" />
-                    <input class="btn btn-primary" type="submit" value="Remove" />
+                    <input class="btn btn-primary" id="cart_button" type="submit" value="Remove" />
                 </form>
 
             </td>
@@ -38,13 +38,12 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><strong>Total:</strong></td>
             <td><strong>
+            <td><strong>Sub-total:</strong></td>
           
-        <label class="badge badge-light">{{ cart_total }}</label> 
+        <td><strong> <label id="sub-total"class="badge badge-light">{{ cart_total }}</label> </strong></td>
 
 
-</strong></td>
             <td></td>
         </tr>
     </tbody>
@@ -53,7 +52,11 @@
 
 
 
-<a href="{% url 'checkout' %}" class="btn btn-success" role="button">Checkout</a> {% else %}
+<a href="{% url 'checkout' %}" class="btn btn-success" id="checkout-button" role="button">Checkout</a> 
+
+
+
+{% else %}
 <td><strong>You cart is empty</strong></td>
 
 {% endif %} {% endblock %}
