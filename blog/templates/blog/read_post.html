@@ -25,6 +25,10 @@
         <a href="{% url 'blog_posts' %}" class="blog_title">Back to Blog</a> {% if user.is_authenticated %}
 
         <hr>
+
+
+
+
         <div class="form-group">
 
             <form method="POST" action="{% url 'comment' post.id %}">
@@ -38,14 +42,12 @@
         {% else %}
         <p>You must be signed in to comment</p>
         {% endif %}
+    </div>
 
 
-
-
-
-        <p class="blog_title">Comments</p>
-
-        <div class="row">
+    {% for comment in post.comments.all %}
+    <div class="row">
+        <div class="col-sm-8">
             <div class="panel panel-white post panel-shadow">
                 <div class="post-heading">
                     <div class="pull-left image">
@@ -53,7 +55,7 @@
                     </div>
                     <div class="pull-left meta">
                         <div class="title h5">
-                            {% for comment in post.comments.all %}
+
                             <a href="#"><b>{{comment.author}}</b></a> made a post.
                         </div>
                         <h6 class="text-muted time">1 minute ago</h6>
@@ -62,11 +64,41 @@
                 <div class="post-description">
                     <p>{{comment.content}}</p>
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>
+
+
+
+    {% endfor %}
+   
 </div>
+
+
+<!--        <p class="blog_title">Comments</p>-->
+
+<!--        <div class="row">-->
+<!--            <div class="panel panel-white post panel-shadow">-->
+<!--                <div class="post-heading">-->
+<!--                    <div class="pull-left image">-->
+<!--                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">-->
+<!--                    </div>-->
+<!--                    <div class="pull-left meta">-->
+<!--                        <div class="title h5">-->
+<!--                            {% for comment in post.comments.all %}-->
+<!--                            <a href="#"><b>{{comment.author}}</b></a> made a post.-->
+<!--                        </div>-->
+<!--                        <h6 class="text-muted time">1 minute ago</h6>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="post-description">-->
+<!--                    <p>{{comment.content}}</p>-->
+<!--                </div>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 

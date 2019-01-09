@@ -11,39 +11,62 @@
 
 
 
-    <div class="row product_list">
-        {% for product in category.products.all %}
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <div class="product_image">
-                    <img class="inner_img" src="{{MEDIA_URL}}{{product.image}}" alt="">
-                </div>
-                <div class="caption">
-                    <h4>€{{product.price}}</h4>
-                    <h4><a href="{% url 'product_detail' product.id %}">{{product.name}}</a>
-                    </h4>
+    <div class="row">
+        
+            {% for product in category.products.all %}
+<div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{MEDIA_URL}}{{product.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'product_detail' product.id %}">{{product.name}}</a></h5>
+                    <h5 class="card-title">€{{product.price}}</h5>
                     <p>{{product.brand}}</p>
-
-
-
-
-                    <!--<form method="POST" action="{% url 'add_to_cart' %}">-->
-
-                    <!--    {% csrf_token %}-->
-
-                    <!--    <label for="size">Size</label>-->
-                    <!--    <input type="number" name="size" value="3" />-->
-                    <!--    <label for="Quantity">Quantity</label>-->
-                    <!--    <input type="number" name="quantity" value="1" />-->
-                    <!--    <input type="hidden" name="product" value="{{product.id}}" />-->
-                    <!--    <input class="btn btn-primary" type="submit" value="Add to cart" />-->
-                    <!--</form>-->
-
+                    <a href="{% url 'product_detail' product.id %}" class="btn btn-primary">Shop Now</a>
                 </div>
             </div>
         </div>
         {% endfor %}
+
     </div>
+
+
+
+
+
+
+    <!--<div class="row product_list">-->
+    <!--    {% for product in category.products.all %}-->
+    <!--    <div class="col-sm-4 col-lg-4 col-md-4">-->
+    <!--        <div class="thumbnail">-->
+    <!--            <div class="product_image">-->
+    <!--                <img class="inner_img" src="{{MEDIA_URL}}{{product.image}}" alt="">-->
+    <!--            </div>-->
+    <!--            <div class="caption">-->
+    <!--                <h4>€{{product.price}}</h4>-->
+    <!--                <h4><a href="{% url 'product_detail' product.id %}">{{product.name}}</a>-->
+    <!--                </h4>-->
+    <!--                <p>{{product.brand}}</p>-->
+
+
+
+
+    <!--<form method="POST" action="{% url 'add_to_cart' %}">-->
+
+    <!--    {% csrf_token %}-->
+
+    <!--    <label for="size">Size</label>-->
+    <!--    <input type="number" name="size" value="3" />-->
+    <!--    <label for="Quantity">Quantity</label>-->
+    <!--    <input type="number" name="quantity" value="1" />-->
+    <!--    <input type="hidden" name="product" value="{{product.id}}" />-->
+    <!--    <input class="btn btn-primary" type="submit" value="Add to cart" />-->
+    <!--</form>-->
+
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!--{% endfor %}-->
+    <!--</div>-->
 </div>
 
 {% endblock content %}
