@@ -55,7 +55,15 @@ a:hover {
 .navbar-right .dropdown-menu {
     left: 0!important;
     right: auto!important;
+
 }
+
+#signup {
+    min-width: 180%;
+
+}
+
+
 
 /*.thumbnail img {*/
 
@@ -250,13 +258,13 @@ td {
 }
 
 #cart-image {
-   margin-left: 25%;
+    margin-left: 25%;
 }
 
 
 #item-total {
     color: #D21345;
-   
+
 }
 
 #sub-total {
@@ -662,6 +670,24 @@ body {
 
 
 /*blog--------------------------------------------*/
+
+#send_comment {
+
+    background-color: #93c54b;
+    color: white;
+
+
+}
+
+#send_comment:hover {
+    background-color: #568611;
+
+}
+
+
+
+
+}
 
 .blog_heading {
 

@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from django.http import HttpResponseRedirect
 from products.models import Product
 import json
 
@@ -24,7 +25,8 @@ def add_to_cart(request):
     print(cart)    
    
     request.session['cart'] = cart
-    return render(request, "products/product_list.html", {"products": products})
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    # return render(request, "products/product_list.html", {"products": products})
 
 
 
