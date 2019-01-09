@@ -26,4 +26,5 @@ def product_detail(request, id):
 def home(request):
     return render(request, "products/home.html")
     
-    
+def delivery(request):
+    return render(request, "products/delivery.html")    

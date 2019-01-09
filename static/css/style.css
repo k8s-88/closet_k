@@ -121,6 +121,23 @@ li {
 
 }
 
+/*--------------------------delivery page---------------------------------*/
+
+.delivery_page {
+    background-color: #EEEEEE;
+    padding: 5%;
+    /*margin-top: 5%;*/
+}
+
+.delivery_heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 0px;
+
+}
+
+
 
 /*------------------------------Home page--------------------------------*/
 
@@ -133,6 +150,7 @@ li {
 
 
 }
+
 
 
 .grid {
