@@ -155,14 +155,14 @@ li {
     width: 100%;
     height: auto;
     margin-top: 50px;
-    
+
 }
 
 @media (max-width:767px) {
     .grey {
         margin-left: 5px;
-        padding-left:0px!important;
-     
+        padding-left: 0px!important;
+
     }
 }
 
@@ -233,15 +233,17 @@ li {
 
 @media (max-width:767px) {
     .card {
-        width: 16rem;
+        width: 15rem;
         margin-bottom: 5px;
-     
+        padding: 0px;
+        margin-left: 5px;
+
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .card {
-          width: 18rem;
+        width: 18rem;
     }
 }
 
@@ -270,7 +272,7 @@ li {
 
 @media (max-width:767px) {
     .card-title {
-     
+
         font-size: 12px
     }
 }
@@ -445,7 +447,7 @@ td {
 
 @media (max-width:767px) {
     .btn {
-     
+
         font-size: 12px
     }
 }
@@ -629,12 +631,22 @@ body {
 
 @media (max-width:767px) {
     .centered {
-        line-height: 70px;
-font-Size: 75px;
-     
+        line-height: 40px;
+        font-Size: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        top: 2%;
+
     }
 }
 
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .centered {
+        margin-top: 0px;
+        top: 2%;
+    }
+}
 
 
 .category_heading {
@@ -644,7 +656,27 @@ font-Size: 75px;
     padding-top: 20px;
     padding-bottom: 0px;
 
+}
 
+
+@media (max-width:767px) {
+    .category_heading {
+        font-size: 2em;
+
+    }
+}
+
+
+.category_column {
+    
+}
+
+@media (max-width:767px) {
+    .category_column {
+      padding:0px;
+      margin:0 auto;
+
+    }
 }
 
 
