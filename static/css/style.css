@@ -123,17 +123,26 @@ li {
 
 /*--------------------------delivery page---------------------------------*/
 
-.delivery_page {
-    background-color: #EEEEEE;
-    padding: 5%;
-    /*margin-top: 5%;*/
+.delivery_title {
+
+    padding-top: 20px;
+
+}
+
+
+
+.delivery_type {
+
+    margin-top: 20px;
+}
+
+.truck {
+    height: 25%;
+    width: 25%;
 }
 
 .delivery_heading {
-    font-family: 'Raleway', sans-serif;
-    font-size: 3em;
-    padding-top: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
 
 }
 
@@ -644,12 +653,19 @@ body {
 
 /*----------------footer---------------------------*/
 
+#delivery_link {
+    color: #A9A9A9;
+}
+
+
 .footer {
     width: 100%;
     text-align: left;
     margin-top: 25px;
     background-color: #EEEEEE;
     color: #A9A9A9;
+    margin-left: 0px;
+    margin-right: 0px;
 
 }
 
@@ -663,6 +679,9 @@ body {
     text-align: left;
     background-color: #DDDDDD;
     color: black;
+    margin-left: 0px;
+    margin-right: 0px;
+    
 
 }
 
@@ -673,10 +692,13 @@ body {
 
 }
 
-#footer {
-    margin-left: 0px;
-    margin-right: 0px;
-}
+/*#footer {*/
+
+/*    margin-left: 0px;*/
+
+/*    margin-right: 0px;*/
+
+/*}*/
 
 .social-links {
 
@@ -703,9 +725,6 @@ body {
 }
 
 
-
-
-}
 
 .blog_heading {
 

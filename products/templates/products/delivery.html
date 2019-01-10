@@ -1,106 +1,48 @@
 {% extends "base.html" %} {% block content %}
-<div class="container delivery_page">
 
 
-    <!--<table class="table table-bordered">-->
-    <!--    <thead>-->
-    <!--        <tr>-->
-
-    <!--            <th scope="col">Standard Delivery</th>-->
-    <!--            <th scope="col">Express Delivery</th>-->
-
-    <!--        </tr>-->
-    <!--    </thead>-->
-    <!--    <tbody>-->
-    <!--        <tr>-->
-
-    <!--            <td>Delivered within 20 days of order. Note: Subject to placing your order before midnight.</td>-->
-    <!--            <td>Delivered within 6 days of order. Note: Subject to placing your order before midnight.</td>-->
-
-    <!--        </tr>-->
-    <!--        <tr>-->
-
-    <!--            <td>£3.09 or Free– spend over £21.39</td>-->
-    <!--            <td>£7.13</td>-->
-
-    <!--        </tr>-->
-
-    <!--    </tbody>-->
-    <!--</table>-->
-
-
-
-<div class="row">
-    <p class="delivery_heading"> Delivery</p>
+<h1 class="delivery_heading">Delivery and Returns</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="/static/images/delivery-truck.jpg" class="truck" />
+            <h2>Standard Delivery</h2>
+            <h3>$2.50</h3>
+            <p><strong>Free</strong>&ndash; spend over $20</p>
+            <div>
+                <ul>
+                    <li>Delivered within 7 days</li>
+                </ul>
+                <p>Note: Subject to placing your order before midnight. </p>
+            </div>
+            <h2 class="delivery_title">Next-Working-Day Delivery</h2>
+            <h3>FREE</h3>
+            <div>
+                <ul>
+                    <li>Delivered between 7am and 10pm the following day</li>
+                </ul>
+                <p>Note: Subject to placing your order before midnight. </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="/static/images/return.jpg" class="truck" />
+            <h2>Parcel Connect</h2>
+            <h3>FREE</h3>
+            <div>
+                <ul>
+                    <li> Return through your local Parcel Connect store in over 1,000 locations. <br>You'll find a pre-paid label on your returns note in your parcel. <br> Open 7 days a week, early until late.</li>
+                </ul>
+                <p>Note: Parcel Connect available in limited areas. </p>
+            </div>
+            <h2 class="delivery_title">Post Office</h2>
+            <h3>FREE</h3>
+            <div>
+                <ul>
+                    <li>Return through your local An Post post office in over 1,000 locations. Your return will be processed in approximately 14 working days.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <b>Standard Delivery</b>
-        </div>
-        <div class="col-md-4">
-            <b>Express Delivery</b>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            Delivered within 20 days of order. <br>Note: Subject to placing your order before midnight.
-        </div>
-        <div class="col-md-4">
-            Delivered within 6 days of order. <br>Note: Subject to placing your order before midnight.
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <b> £3.09 Free– spend over £21.39</b>
-        </div>
-        <div class="col-md-4">
-            <b> £7.13</b>
-        </div>
-    </div>
-    
-
-
-<div class="row">
-  <p class="delivery_heading"> Returns</p>
-</div>
-
-
-
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <b> Post Office</b>
-        </div>
-        <div class="col-md-4">
-            <b>Parcel Connect</b>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            Return through your local An Post post office in over 1,000 locations. Your return will be processed in approximately 14 working days.
-        </div>
-        <div class="col-md-4">
-            Return through your local Parcel Connect store in over 1,000 locations. You'll find a pre-paid label on your returns note in your parcel Open 7 days a week, early until late.
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <b>FREE</b>
-        </div>
-        <div class="col-md-4">
-            <b>FREE</b>
-        </div>
-    </div>
-
-</div>
 {% endblock content %}
