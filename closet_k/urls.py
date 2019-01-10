@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from accounts.views import signup, show_profile
-from products.views import product_list, product_detail, home, view_category, delivery
+from products.views import product_detail, home, view_category, delivery
 from cart.views import add_to_cart, view_cart, remove_from_cart, HttpResponseRedirect
 from checkout.views import checkout, submit_payment
 from django.views.static import serve
@@ -31,7 +31,7 @@ urlpatterns = [
     path('delivery/', delivery, name="delivery"),
     path('', home, name="home"),
     path('category/<int:id>', view_category, name="view_category"),
-    path('products/', product_list, name="products"),
+    # path('products/', product_list, name="products"),
     path('accounts/profile', show_profile, name='profile'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', signup, name='signup'),
