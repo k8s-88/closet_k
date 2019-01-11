@@ -15,8 +15,8 @@
 
         {% for product in category.products.all %}
         <div class="col-xs-6 col-md-3 view_category_row">
-            <div class="card product_card">
-                <img class="card-img-top" src="{{MEDIA_URL}}{{product.image}}" alt="Card image cap">
+            <div class="card">
+                <img class="card-img-top product_card" src="{{MEDIA_URL}}{{product.image}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'product_detail' product.id %}">{{product.name}}</a></h5>
                     <h5 class="card-title">€{{product.price}}</h5>

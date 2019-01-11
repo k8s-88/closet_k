@@ -491,7 +491,7 @@ td {
 
 @media (min-width: 992px) and (max-width: 1800px) {
     .product_card {
-        width: 25rem!important;
+        width: 20rem!important;
         margin-top: 10%;
 
     }
