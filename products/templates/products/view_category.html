@@ -11,7 +11,7 @@
 
 
 
-    <div class="row grey">
+    <div class="row">
 
         {% for product in category.products.all %}
         <div class="col-xs-6 col-md-3 view_category_row">
@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'product_detail' product.id %}">{{product.name}}</a></h5>
                     <h5 class="card-title">€{{product.price}}</h5>
-                    <!--<p>{{product.brand}}</p>-->
+                    <p>{{product.brand}}</p>
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-primary" id="shop_now">Shop Now</a>
                 </div>
             </div>

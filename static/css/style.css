@@ -987,6 +987,8 @@ body {
     color: #A9A9A9;
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 0px;
+    bottom: 0;
 
 }
 
@@ -1002,6 +1004,8 @@ body {
     color: black;
     margin-left: 0px;
     margin-right: 0px;
+    bottom: 0;
+    margin-bottom: 0px;
 
 
 }
@@ -1013,13 +1017,6 @@ body {
 
 }
 
-/*#footer {*/
-
-/*    margin-left: 0px;*/
-
-/*    margin-right: 0px;*/
-
-/*}*/
 
 .social-links {
 
