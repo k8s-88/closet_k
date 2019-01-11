@@ -394,7 +394,29 @@ td {
 
 #cart-image {
     margin-left: 25%;
+    width: 150px;
+    height: 75px;
 }
+
+
+@media (max-width:767px) {
+    #cart-image {
+        width: 13rem;
+        margin-left: 0px!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #cart-image {
+        margin-left: 0px!important;
+
+    }
+}
+
+
+
+
+
 
 
 #item-total {
