@@ -76,9 +76,15 @@ a:hover {
 body {
     font-family: 'Raleway', sans-serif;
     padding-top: 100px;
-
-
 }
+
+@media (max-width:767px) {
+    body {
+        padding-top: 15%;
+
+    }
+}
+
 
 
 
@@ -168,14 +174,18 @@ li {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .grey {
-           margin-left: 5px;
-           margin-right: 5px;
-       
+        margin-left: 0px;
+        margin-right: 5px;
+
     }
 }
 
 @media (min-width: 992px) and (max-width: 1800px) {
-    .grey {}
+    .grey {
+        padding-left: 10px!important;
+        margin-left: 0px!important;
+        padding-bottom: 3%!important;
+    }
 }
 
 
@@ -189,6 +199,17 @@ li {
 
 }
 
+@media (max-width:767px) {
+    .grid {
+        margin-left: 0px!important;
+
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .grid {}
+}
 
 
 .arrow2 {
@@ -232,9 +253,7 @@ li {
 
 
 
-.blog_card {
-    
-}
+.blog_card {}
 
 @media (max-width:767px) {
     .blog_card {
@@ -243,10 +262,18 @@ li {
 
     }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
     .blog_card {
         width: 16rem;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .blog_card {
+        width: 25rem!important;
+
     }
 }
 
@@ -281,18 +308,21 @@ li {
 @media (min-width: 992px) and (max-width: 1800px) {
     .card {
         width: 18rem;
+        margin: 0 auto;
     }
 }
 
 
-#product_detail {
-    width: 18rem;
-    float: right;
-}
 
-#product_detail_2 {
-    text-align: left;
-}
+
+
+
+
+
+
+
+
+
 
 .card-title {
     font-size: 16px;
@@ -390,6 +420,62 @@ td {
 }
 
 
+.view_category_row {}
+
+@media (max-width:767px) {
+    .view_category_row {
+        /*margin-bottom: 15%!important;*/
+        padding: 0px;
+        margin: 0 auto;
+        padding-top: 5%;
+
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .view_category_row {
+        width: 33%;
+        padding-top: 5%;
+
+
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .view_category_row {
+        width: 25%;
+
+    }
+}
+
+
+
+.product_card {}
+
+@media (max-width:767px) {
+    .product_card {
+        /*width: 25rem!important;*/
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .product_card {
+        width: 20rem!important;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .product_card {
+        width: 25rem!important;
+        margin-top: 10%;
+
+    }
+}
+
+
 
 
 /*---------------------product detail page---------------------------------*/
@@ -419,15 +505,63 @@ td {
 
 }
 
+.product_detail_card_img_top {}
 
-#price {
-    color: #D21345;
-    font-size: 18px;
+@media (min-width: 768px) and (max-width: 991px) {
+    .product_detail_card_img_top {
+        width: 25rem;
+        float: right;
+    }
 }
 
-#product_name {
-    font-size: 18px;
-    padding-top: 5px;
+@media (min-width: 992px) and (max-width: 1800px) {
+    .product_detail_card_img_top {
+        width: 25rem;
+        float: right;
+    }
+}
+
+
+/*#price {*/
+
+/*    color: #D21345;*/
+
+/*    font-size: 18px;*/
+
+/*}*/
+
+/*#product_name {*/
+
+/*    font-size: 18px;*/
+
+/*    padding-top: 5px;*/
+
+/*}*/
+
+/*#product_detail {*/
+
+/*    width: 18rem;*/
+
+/*    float: right;*/
+
+/*}*/
+
+.product_detail_2 {
+
+    text-align: left;
+
+}
+
+@media (max-width:767px) {
+    {}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    {}
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    {}
 }
 
 
@@ -717,26 +851,36 @@ body {
     }
 }
 
+@media (min-width: 992px) and (max-width: 1800px) {
+    .category_column {
+        width: 16%;
+
+    }
+}
+
 
 
 .blog_column {}
 
 @media (max-width:767px) {
-    .blog_column {
-      
-
-    }
+    .blog_column {}
 }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
     .blog_column {
-width: 23%;
-margin-right: 10px;
+        width: 23%;
+        margin-right: 10px;
     }
 }
 
 
+@media (min-width: 992px) and (max-width: 1800px) {
+    .blog_column {
+        width: 25%;
+
+    }
+}
 
 
 

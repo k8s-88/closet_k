@@ -11,16 +11,16 @@
 
 
 
-    <div class="row">
-        
-            {% for product in category.products.all %}
-<div class="col-md-3">
-            <div class="card" style="width: 18rem;">
+    <div class="row grey">
+
+        {% for product in category.products.all %}
+        <div class="col-xs-6 col-md-3 view_category_row">
+            <div class="card product_card">
                 <img class="card-img-top" src="{{MEDIA_URL}}{{product.image}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'product_detail' product.id %}">{{product.name}}</a></h5>
                     <h5 class="card-title">€{{product.price}}</h5>
-                    <p>{{product.brand}}</p>
+                    <!--<p>{{product.brand}}</p>-->
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-primary" id="shop_now">Shop Now</a>
                 </div>
             </div>
