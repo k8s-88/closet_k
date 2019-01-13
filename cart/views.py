@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
-from django.http import HttpResponseRedirect
 from products.models import Product
+from django.http import HttpResponseRedirect
 import json
 
 # Create your views here.
@@ -60,6 +60,7 @@ def view_cart(request):
             cart_total += product.price * quantity
     
     return render(request, "cart/view_cart.html", {'cart_items': cart_items, 'cart_total': cart_total})
+    
     
     
 def remove_from_cart(request):
