@@ -3,9 +3,8 @@
 <div class="row">
     <!--<div class="col-xs-3"></div>-->
     <div class="col-xs-6 col-md-2 product_detail_row">
-        <!--<div class="card" id="product_detail">-->
         <img class="card-img-top product_detail_card_img_top" src="{{MEDIA_URL}}{{product.image}}">
-        <!--</div>-->
+
     </div>
 
 
@@ -14,8 +13,6 @@
         <p id="price"><b>€{{product.price}}</b></p>
         <p>{{product.brand}}</p>
         <p>{{product.description}}</p>
-
-        <!--<div class="col-xs-2" id="product_detail_2">-->
 
         <form method="POST" action="{% url 'add_to_cart' %}">
 
