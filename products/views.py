@@ -28,3 +28,7 @@ def home(request):
     
 def delivery(request):
     return render(request, "products/delivery.html")    
+
+
+def contact(request):
+    return render(request, "products/contact.html")    
