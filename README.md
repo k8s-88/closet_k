@@ -95,7 +95,10 @@ Wireframes were drawn manually and can be found in the wireframes folder.
 
 # Testing
 
-Automated testing was done using Django’s testing framework. 25 tests were written with an overall coverage score of 83%.
+![Build Status](https://travis-ci.org/katiemodonnell/closet_k.svg?branch=master)
+
+Automated testing was done using Travis - CI. 25 tests were written with an overall coverage score of 83%.
+
 
 To run the tests when you have the project running locally, complete the following two steps:
 
