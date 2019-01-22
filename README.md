@@ -140,6 +140,9 @@ When viewing the site on Internet Explorer, I noticed that the product detail pa
 The site is hosted on heroku.(https://katiemodonnell88-closet-k.herokuapp.com/). 
 Static assets are hosted on Amazon S3.
 
+The credit card number to be used to make purchases is "4242424242424242".
+
+The only differences between the production and development sites are that the category id numbers are different.
 # Credits
 
 ## Content
