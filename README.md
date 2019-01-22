@@ -127,13 +127,13 @@ User testing was done to ensure:
 * All links work correctly.
 * The navbar links link to the correct section of the site.
 * User generated content (blog comments) displayed correctly.
-* Defensive design:
+* Defensive design.
 * Users can only enter comments on blog articles when logged in.
 * Users must be logged in to make a purchase
 
 ## Issues
 
-When viewing the site on Internet Explorer, I noticed that the product detail page, although working, the content is aligned slightly further to the left than it should be.
+When viewing the site on Internet Explorer, I noticed that the product detail page, although working, the content is aligned slightly further to the left than it should be. In addition, the cart for mobile view only on the navigation bar is showing on desktop view in internet explorer. This does not happen on Mozilla or Chrome.
 
 # Deployment
 

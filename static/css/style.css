@@ -618,9 +618,25 @@ td {
 
 }
 
+
+@media (max-width:767px) {
+
+   #size {
+        width:60%;
+
+    }
+}
+
 #quantity {
 
     box-shadow: 1px 1px 8px #93c54b;
+}
+@media (max-width:767px) {
+
+  #quantity  {
+        width:60%;
+
+    }
 }
 
 
