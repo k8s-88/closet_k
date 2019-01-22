@@ -31,6 +31,15 @@
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <ul class="cart_on_small_screen">
+                    <li><a href="{% url 'view_cart' %}" class=""><i class="fa fa-shopping-cart"></i> Cart                        
+                          {% if items_in_cart > 0 %}
+                          <label class="badge badge-light">{{ items_in_cart }}</label>
+                          {% endif %}
+                          </a>
+                    </li>
+                </ul>
+
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -50,23 +59,22 @@
                         </a>
                     </li>
 
-                    <!--<li><a href="{% url 'view_category' 2 %}"> Women</a></li>-->
-
-
+                    <li class="link_to_home"> <a href="/">Home</a> </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Women</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a href="/category/4">Heels</a>
-                            <a href="/category/7">Trainers</a>
-                            <a href="/category/6">Boots</a>
+                            <a href="/category/7">Heels</a>
+                            <a href="/category/4">Trainers</a>
+                            <a href="/category/5">Boots</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Men</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a href="/category/3">Trainers</a>
-                            <a href="/category/8">Shoes</a>
-                            <a href="/category/5">Boots</a>
+                            <a href="/category/8">Trainers</a>
+                            <a href="/category/2">Shoes</a>
+                            <a href="/category/6">Boots</a>
                         </div>
                     </li>
                     <li><a href="{% url 'blog_posts' %}"> Blog </a></li>
@@ -112,7 +120,7 @@
 
     <div class="row footer">
         <div class="col-sm-4">
-            <p class="footer_text"><strong>Help & Information</strong><br><br> <a href="/delivery" id="delivery_link">Delivery & Returns </a><br><a href="/contact"  id="delivery_link"> Contact Us </a> <br> 10% Student Discount <br> Premier Delivery
+            <p class="footer_text"><strong>Help & Information</strong><br><br> <a href="/delivery" id="delivery_link">Delivery & Returns </a><br><a href="/contact" id="delivery_link"> Contact Us </a> <br> 10% Student Discount <br> Premier Delivery
             </p>
         </div>
         <div class="col-sm-4">

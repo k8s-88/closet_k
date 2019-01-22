@@ -18,6 +18,57 @@ a:hover {
 
 }
 
+@media (max-width:767px) {
+
+    .cart_on_small_screen {
+        padding: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        float: right;
+        padding: 9px 10px;
+        margin-right: 25px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cart_on_small_screen {
+        display: none;
+
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .cart_on_small_screen {
+        display: none;
+
+    }
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .link_to_home {
+        display: none!important;
+
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .link_to_home {
+        display: none!important;
+
+    }
+}
+
+
+
+
 
 .navbar-default {
     background-color: #EEEEEE;
@@ -33,6 +84,25 @@ a:hover {
 .navbar-default .navbar-brand:hover {
     color: black;
 }
+
+.navbar-toggle {
+
+    float: left;
+    margin-left: 15px;
+
+
+}
+
+
+
+@media (max-width:767px) {
+
+    .navbar-brand {
+        display: none!important;
+
+    }
+}
+
 
 
 .navbar-fixed-top {
@@ -394,6 +464,7 @@ li {
     margin-left: 0px!important;
     margin-right: 0px!important;
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
     .checkout_small_devices {
         display: none;
@@ -1006,15 +1077,16 @@ body {
 .footer {
     width: 100%;
     text-align: left;
-    margin-top: 35px;
+    margin-top: 50px;
     background-color: #EEEEEE;
     color: #A9A9A9;
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 0px;
-    bottom: 0;
 
 }
+
+
+
 
 .footer_text {
     margin: 20px;
