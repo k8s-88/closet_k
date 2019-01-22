@@ -142,7 +142,8 @@ Static assets are hosted on Amazon S3.
 
 The credit card number to be used to make purchases is "4242424242424242".
 
-The only differences between the production and development sites are that the category id numbers are different.
+The only differences between the production and development sites are that the category id numbers are different. In development, the links to the categories direct to the wrong category page becuase of these differences in id's. The links in the live site (prodution) all link to the correct pages though.
+
 # Credits
 
 ## Content

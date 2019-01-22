@@ -377,18 +377,8 @@ li {
 
 
 
-
-
-
-
-
-
-
-
-
-
 .card-title {
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px;
     padding: 10px;
 
@@ -397,7 +387,16 @@ li {
 @media (max-width:767px) {
     .card-title {
 
-        font-size: 12px
+        font-size: 12px;
+        padding: 1px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .card-title {
+
+        margin: 0px;
     }
 }
 
@@ -499,7 +498,7 @@ td {
 #cart-image {
     margin-left: 25%;
     width: 150px;
-    /*height: 75px;*/
+
 }
 
 
@@ -550,7 +549,7 @@ td {
 
 @media (max-width:767px) {
     .view_category_row {
-        /*margin-bottom: 15%!important;*/
+
         padding: 0px;
         margin: 0 auto;
         padding-top: 5%;
@@ -571,9 +570,7 @@ td {
 }
 
 @media (min-width: 992px) and (max-width: 1800px) {
-    .view_category_row {
-        /*width: 33%;*/
-    }
+    .view_category_row {}
 }
 
 
@@ -581,9 +578,7 @@ td {
 .product_card {}
 
 @media (max-width:767px) {
-    .product_card {
-        /*width: 25rem!important;*/
-    }
+    .product_card {}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -595,7 +590,7 @@ td {
 
 @media (min-width: 992px) and (max-width: 1800px) {
     .product_card {
-        /*width: 25rem!important;*/
+
         margin-top: 10%;
         max-width: 100%;
 
@@ -613,7 +608,7 @@ td {
     background-color: white!important;
     border-radius: 10%;
     left: 10%!important;
-    /*margin-top:70%!important;*/
+
 }
 
 
@@ -632,7 +627,6 @@ td {
 #add_to_cart {
     background-color: #93c54b;
     color: white;
-    /*padding:5px;*/
     margin-top: 25px;
 
 }
@@ -648,8 +642,7 @@ td {
     .product_detail_card_img_top {
         width: 22rem;
         float: right;
-        /*margin-top: 10%;*/
-        /*max-width: 100%;*/
+
     }
 }
 
@@ -657,8 +650,7 @@ td {
 
 @media (min-width: 992px) and (max-width: 1800px) {
     .product_detail_card_img_top {
-        /*width: 25rem;*/
-        /*float: right;*/
+
         margin-top: 10%;
         max-width: 100%;
 
@@ -955,8 +947,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
     .category_column {
         width: 33%;
-        /*padding-top: 10px;*/
-        /*margin-bottom: 10px*/
+
     }
 }
 
@@ -998,19 +989,13 @@ body {
 
 .row {
     display: -ms-flexbox;
-    /*IE10 */
-    /*display: flex;*/
-    /*-ms-flex-wrap: wrap;*/
-    /*IE10 */
-    /*flex-wrap: wrap;*/
     padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+
 
 .column {
     -ms-flex: 25%;
-    /*IE10 */
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
@@ -1021,7 +1006,7 @@ body {
     vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+
 
 @media screen and (max-width: 800px) {
     .column {
@@ -1031,7 +1016,6 @@ body {
     }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 600px) {
     .column {
@@ -1287,13 +1271,7 @@ body {
     margin-top: 20px;
 }
 
-/*.post .post-description .stats .stat-item {*/
 
-/*    display: inline-block;*/
-
-/*    margin-right: 15px;*/
-
-/*}*/
 
 .post .post-description .stats .stat-item .icon {
     margin-right: 8px;
@@ -1345,25 +1323,3 @@ body {
 }
 
 /*--------------------------------------------------------------*/
-
-/*.social-links li a i {*/
-
-/*    width: 32px;*/
-
-/*    height: 32px;*/
-
-/*padding: 12px 0;*/
-
-/*border-radius: 50%;*/
-
-/*    font-size: 13px;*/
-
-/*    line-height: 7px;*/
-
-/*    texrt-align: center;*/
-
-/*    color: #88898A;*/
-
-/*    background-color: #feb3cd;*/
-
-/*}*/

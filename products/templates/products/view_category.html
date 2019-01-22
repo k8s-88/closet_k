@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'product_detail' product.id %}">{{product.name}}</a></h5>
                     <h5 class="card-title">€{{product.price}}</h5>
-                    <p>{{product.brand}}</p>
+                    <h5>{{product.brand}}</h5>
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-primary" id="shop_now">Shop Now</a>
                 </div>
             </div>
