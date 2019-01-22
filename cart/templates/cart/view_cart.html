@@ -1,10 +1,9 @@
 {% extends "base.html" %} {%block content %}
 
-<div class="row">
-    <div class="col-xs-12">
 
 
-
+<div class="row checkout_medium_and_larger_devices">
+    <div class="col-md-12">
         {% if items_in_cart > 0 %}
         <table class="table table-hover">
             <thead>
@@ -46,7 +45,7 @@
                     <td></td>
                     <td></td>
                     <td><strong>
-            <td><strong>Sub-total:</strong></td>
+        <td><strong>Sub-total:</strong></td>
 
                     <td><strong> <label id="sub-total"class="badge badge-light">{{ cart_total }}</label> </strong></td>
 
@@ -55,10 +54,6 @@
                 </tr>
             </tbody>
         </table>
-
-
-
-
         <a href="{% url 'checkout' %}" class="btn btn-success" id="checkout-button" role="button">Checkout</a> {% else %}
         <td><strong>You cart is empty</strong></td>
 
@@ -66,5 +61,68 @@
 
     </div>
 </div>
+
+
+
+<!------------------------small devices------------------------>
+
+{% if items_in_cart > 0 %} {% for item in cart_items %}
+
+<div class="row checkout_small_devices">
+
+
+    <!--<div class="col-xs-1"></div>-->
+    <div class="col-xs-3">
+        <td><img id="cart-image" src="{{ MEDIA_URL }}{{ item.image}}" /></td>
+    </div>
+    <dic class="col-xs-2"></dic>
+    <div class="col-xs-6">
+        <div class="row">
+            {{ item.name }}
+        </div>
+        <div class="row">
+            €{{ item.price }}
+        </div>
+        <div class="row">
+            Size {{ item.size }} / Qty {{ item.quantity }}
+        </div>
+
+        <div class="row">
+            <form method="POST" action="{% url 'remove_from_cart' %}">
+                {% csrf_token %}
+                <input type="hidden" name="product" value="{{ item.id }}" />
+                <input type="hidden" name="size" value="{{ item.size }}" />
+                <input class="btn btn-primary" id="cart_button" type="submit" value="Remove" />
+            </form>
+        </div>
+        <hr>
+    </div>
+</div>
+
+{% endfor %}
+
+<br>
+<div class="row checkout_small_devices">
+    <div class="col-xs-3">
+
+        <b>TOTAL:</b></div>
+    <div class="col-xs-5"></div>
+    <div class="col-xs-4">
+        <strong> <label id="sub-total"class="badge badge-light">{{ cart_total }}</label> </strong></div>
+
+</div>
+<div class="row checkout_small_devices">
+    <div class="col-xs-12">
+        <a href="{% url 'checkout' %}" class="btn btn-success" id="checkout-button-mobile" role="button">Checkout</a></div>
+</div>
+{% else %}
+<div class="checkout_small_devices"><strong>You cart is empty</strong></div>
+
+
+{% endif %}
+
+</div>
+
+
 
 {% endblock %}

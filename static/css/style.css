@@ -40,7 +40,7 @@ a:hover {
 
 }
 
-a form .form-control{
+a form .form-control {
     height: 26px!important;
 }
 
@@ -385,6 +385,40 @@ li {
 
 }
 
+#checkout-button-mobile {
+    width: 100%;
+    margin-top: 3%;
+}
+
+.checkout_small_devices {
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .checkout_small_devices {
+        display: none;
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .checkout_small_devices {
+        display: none;
+    }
+}
+
+
+
+
+
+@media (max-width:767px) {
+    .checkout_medium_and_larger_devices {
+        display: none;
+
+    }
+}
+
+
 
 td {
     text-align: left;
@@ -504,7 +538,6 @@ td {
 
 /*---------------------product detail page---------------------------------*/
 
-
 #back_button {
     background-color: white!important;
     border-radius: 10%;
@@ -546,8 +579,6 @@ td {
         float: right;
         /*margin-top: 10%;*/
         /*max-width: 100%;*/
-
-
     }
 }
 
@@ -570,9 +601,7 @@ td {
 .product_detail_row {}
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .product_detail_row {
-
-    }
+    .product_detail_row {}
 }
 
 
@@ -962,6 +991,7 @@ body {
 
 
 /*------------------------------------payment form------------------------*/
+
 .form-control {
     height: 40px;
 }

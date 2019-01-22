@@ -6,9 +6,13 @@
     //]]>
 </script>
 <script type="text/javascript" src="{% static 'checkout/stripe.js' %}"></script>
-{% endblock %} {% block content %}
+{% endblock %} 
 
-<div class="row">
+{% block content %}
+
+<!--------------------------------medium and larger screen view------------------------------------->
+
+<div class="row checkout_medium_and_larger_devices">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
         <table class="table">
@@ -48,6 +52,52 @@
 </div>
 <hr>
 
+<!----------------------------------small screen view--------------------------------->
+
+{% for item in cart_items %}
+
+<div class="row checkout_small_devices">
+
+
+    <!--<div class="col-xs-1"></div>-->
+    <div class="col-xs-3">
+        <td><img id="cart-image" src="{{ MEDIA_URL }}{{ item.image}}" /></td>
+    </div>
+    <dic class="col-xs-2"></dic>
+    <div class="col-xs-6">
+        <div class="row">
+            {{ item.name }}
+        </div>
+        <div class="row">
+            €{{ item.price }}
+        </div>
+        <div class="row">
+            Size {{ item.size }} / Qty {{ item.quantity }}
+        </div>
+
+        <hr>
+    </div>
+</div>
+
+{% endfor %}
+
+<br>
+
+<div class="row checkout_small_devices">
+    <div class="col-xs-3">
+
+        <b>TOTAL:</b></div>
+    <div class="col-xs-5"></div>
+    <div class="col-xs-4">
+        <strong> <label id="sub-total"class="badge badge-light">{{ cart_total }}</label> </strong></div>
+<br>
+<br>
+
+</div>
+
+
+
+<!---------------------------------checkout form------------------------------------------>
 
 <form role="form" method="post" id="payment-form" action="{% url 'submit_payment' %}">
 
