@@ -7,16 +7,16 @@ Sole Mates is an e-commerce website that sells shoes. It also contains a blog se
 * A large catalogue of shoes, categorised by gender and shoe style.
 * The ability to add shoes to a cart, update the cart, and checkout.
 * A blog section where users can read articles about shoes and leave comments.
-* The ability to create and account(sign-up) and to login/logout of profile.
+* The ability to create an account(sign-up) and to login/logout of profile.
 * Information area for delivery and returns and contact information.
 * This website was built in Python3 using the Django framework.
-* A live version is hosted here.
+* A live version is hosted [here](https://katiemodonnell88-closet-k.herokuapp.com/).
 
 # UX
 
 The aim of this site, aside from selling shoes, is to provide the user with a variety of attractive images of shoes for sale; interesting blog content and pleasing blog images so that the user has a satisfying browsing session.
 
-* The user immediately sees an impactful video on the homepage with an overlay of text when they arrive on the home page. The idea of this feature is to make the website stand out and memorable to the user.
+* The user immediately sees an impactful video on the homepage with an overlay of text when they arrive on the home page. The idea of this feature is to make the website stand out and be memorable to the user.
 
 * There is a simple layout throughout the site with a grey and white colour scheme, keeping the website clean, modern and minimalist in design. The use of attractive imagery throughout the site improves the user experience and makes their time spent on the site enjoyable. The layout of the site enables the user to navigate throughout the site easily and with minimum confusion which also makes their experience more enjoyable and memorable.
 
@@ -24,7 +24,7 @@ The aim of this site, aside from selling shoes, is to provide the user with a va
 
 * Users who are on the site to view the blog, can also find a link to the blog on the navigation bar or on the home page where they can choose from a variety of articles which again, makes it very easy for them to get to where they want to get to without being overloaded with information that they are not interested in.
 
-* Users need to be logged in to purchase products and the user login functionality is easy to see on the nav bar. If a user tries to purchase a product without being logged in, they will be immediately directed to the login screen, making the whole process very simple.  In addition, users need to be logged in to post comments on a blog - if they try to comment while not logged in, they will be directed to the login page.
+* Users need to be logged in to purchase products and the user login functionality is easy to see on the navigation bar. If a user tries to purchase a product without being logged in, they will be immediately directed to the login screen, making the whole process very simple.  In addition, users need to be logged in to post comments on a blog - if they try to comment while not logged in, they will be directed to the login page.
 
 # Wireframing
 
@@ -35,8 +35,8 @@ Wireframes were drawn manually and can be found in the wireframes folder.
 (In addition to those features mentioned at the beginning of this document):
 
 * Sign-up and login capability 
-* logout option
-* linkable sections on the site from the navbar
+* logout capability
+* linkable sections on the site from the navigation bar
 * linkable sections on the home page to other parts of the site
 * keyframe bouncing arrows on the home page
 
@@ -60,7 +60,7 @@ Wireframes were drawn manually and can be found in the wireframes folder.
 
 ## Product app
 
-*  Users can search for products using the search bar.
+* Users can search for products using the search bar.
 * Users can navigate through the products by selecting the category they are looking for.
 * Shoes are presented in a simple layout, initially displaying a simple image, title, cost and option to “shop now”. Once clicked into, further information such as a description and options to choose a size, quantity and add to cart are presented.
 
@@ -137,11 +137,8 @@ When viewing the site on Internet Explorer, I noticed that the product detail pa
 
 # Deployment
 
-The site is hosted on github pages (deployed from the master branch) and on Heroku (https://katiemodonnell88-closet-k.herokuapp.com/). The development and production versions are identical to one another.
-
-Run locally
-
-To run this site locally, in your terminal enter: git clone https://github.com/katiemodonnell/closet_k
+The site is hosted on heroku.(https://katiemodonnell88-closet-k.herokuapp.com/). 
+Static assets are hosted on Amazon S3.
 
 # Credits
 
